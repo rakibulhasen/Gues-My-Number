@@ -1,0 +1,116 @@
+@import "./header";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 0;
+  border: 0;
+  font-family: "Courier New", Courier, monospace;
+}
+body {
+  background: #444;
+  color: #fff;
+  overflow: hidden;
+  @include changeHeader(#444);
+}
+.game-screan {
+  width: 80vw;
+  margin: auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  .btn {
+    background-color: whitesmoke;
+    color: #444;
+    padding: 15px 20px;
+    font-size: 1.6rem;
+    font-family: inherit;
+    font-weight: bold;
+    border-radius: 0.2rem;
+    transition: all 0.3s;
+    cursor: pointer;
+    &:hover {
+      background-color: teal;
+      color: whitesmoke;
+    }
+  }
+  .game-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    p {
+      font-size: 1.6rem;
+      font-weight: bold;
+    }
+  }
+  .game-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    .game-title {
+      font-size: 3.5rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+    .game-correct-ans {
+      width: 14rem;
+      aspect-ratio: 1/1;
+      font-size: 3.5rem;
+      font-weight: bold;
+      display: grid;
+      place-content: center;
+      background-color: teal;
+      border-radius: 3px;
+    }
+  }
+  .game-guess-screen {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .check-screen {
+    display: flex;
+    flex-direction: column;
+    input {
+      padding: 1rem;
+      color: #444;
+      font-size: 3rem;
+      font-weight: bold;
+      text-align: center;
+      width: 15rem;
+      margin-bottom: 1rem;
+      border-radius: 0.3rem;
+    }
+    .check {
+      background-color: teal;
+      color: whitesmoke;
+      &:hover {
+        background-color: white;
+        color: teal;
+      }
+    }
+  }
+  .score-screen {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+}
+
+.congratolation-win {
+  position: absolute;
+  bottom: 0;
+  animation: win 5s linear infinite;
+  animation-play-state: paused;
+  animation-play-state: running;
+}
+
+@keyframes win {
+  from {
+    bottom: 0;
+  }
+  to {
+    top: 0;
+  }
+}

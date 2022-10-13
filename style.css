@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 0;
+  border: 0;
+  font-family: "Courier New", Courier, monospace;
+}
+
+body {
+  background: #444;
+  color: #fff;
+  overflow: hidden;
+  background-color: #444;
+}
+
+.game-screan {
+  width: 80vw;
+  margin: auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.game-screan .btn {
+  background-color: whitesmoke;
+  color: #444;
+  padding: 15px 20px;
+  font-size: 1.6rem;
+  font-family: inherit;
+  font-weight: bold;
+  border-radius: 0.2rem;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.game-screan .btn:hover {
+  background-color: teal;
+  color: whitesmoke;
+}
+.game-screan .game-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.game-screan .game-header p {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+.game-screan .game-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.game-screan .game-body .game-title {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.game-screan .game-body .game-correct-ans {
+  width: 14rem;
+  aspect-ratio: 1/1;
+  font-size: 3.5rem;
+  font-weight: bold;
+  display: grid;
+  place-content: center;
+  background-color: teal;
+  border-radius: 3px;
+}
+.game-screan .game-guess-screen {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.game-screan .check-screen {
+  display: flex;
+  flex-direction: column;
+}
+.game-screan .check-screen input {
+  padding: 1rem;
+  color: #444;
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  width: 15rem;
+  margin-bottom: 1rem;
+  border-radius: 0.3rem;
+}
+.game-screan .check-screen .check {
+  background-color: teal;
+  color: whitesmoke;
+}
+.game-screan .check-screen .check:hover {
+  background-color: white;
+  color: teal;
+}
+.game-screan .score-screen {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.congratolation-win {
+  position: absolute;
+  bottom: 0;
+  -webkit-animation: win 5s linear infinite;
+          animation: win 5s linear infinite;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+}
+
+@-webkit-keyframes win {
+  from {
+    bottom: 0;
+  }
+  to {
+    top: 0;
+  }
+}
+
+@keyframes win {
+  from {
+    bottom: 0;
+  }
+  to {
+    top: 0;
+  }
+}/*# sourceMappingURL=style.css.map */
